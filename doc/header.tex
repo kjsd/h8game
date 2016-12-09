@@ -1,0 +1,58 @@
+\documentclass[a4j]{jarticle}
+\usepackage{makeidx}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\usepackage[dvipdfm,
+  bookmarkstype=toc=true,
+  pagebackref=true,
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue,
+  linktocpage=true,
+  bookmarks=false
+]{hyperref}
+\usepackage{pspicture}
+\usepackage{doxygen}
+\setlength{\headheight}{15pt}
+\rfoot[]{\fancyplain{}{\bfseries\scriptsize Confidential}}
+\lfoot[]{\fancyplain{}{\bfseries\scriptsize Copyright (c) 2009 Totec Amenity, Ltd. All rights reserved.}}
+
+\usepackage{svn}
+
+\SVNdate $Date: 2009-02-02 14:23:14 +0900 (月, 02 2 2009) $
+\SVN $LastChangedRevision: 85 $
+
+\renewcommand{\maketitle}{%
+  \begin{titlepage}%
+    \vskip 2em%
+    \begin{center}%
+      {\Large $projectname リファレンスマニュアル}\\
+      \vskip 6em%
+      rev. \SVNLastChangedRevision \\
+      \SVNDate \\
+      \vfill
+      箕浦 賢嗣 \\
+      \vskip 1em%
+      トーテックアメニティ株式会社 \\
+      エンジニアリング事業部  \\
+    \end{center}%
+    \vskip 1.5em
+  \end{titlepage}%
+}%
+
+\renewcommand{\footrulewidth}{0.4pt}
+ \makeindex
+\setcounter{tocdepth}{3}
+
+\begin{document}
+\maketitle
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
